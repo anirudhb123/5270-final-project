@@ -1,0 +1,1612 @@
+{
+  "summary": {
+    "examples_evaluated": 200,
+    "compile_successes": 114,
+    "compile_rate": 0.57,
+    "tests_passed": 1334,
+    "tests_total": 2003,
+    "functional_pass_rate": 0.6660009985022466
+  },
+  "per_example_results": [
+    {
+      "idx": 0,
+      "compiled": true,
+      "tests_passed": 4,
+      "tests_total": 4,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 1,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpsso6191h/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | getConfig == Map.fromList [(\"setting1\", StringValue \"value1\"), (\"setting2\", IntValue 42), (\"setting3\", ListValue [IntValue 1, IntValue 2, IntValue 3])]\n   | ^\n"
+    },
+    {
+      "idx": 2,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmptzgssece/Solution.hs:30:46: error:\n    \u2022 Couldn't match type \u2018[Int]\u2019 with \u2018Int\u2019\n      Expected type: [([Int], [Int])]\n        Actual type: [([[Int]], [Int])]\n    \u2022 In the expression: (newSizes, newCounts) : assignTestcases rest'\n      In an equation for \u2018assignTestcases\u2019:\n          assignTestcases ((sizes, counts) : rest)\n            = (newSizes, newCounts) : assignTestcases rest'\n            where\n                (newSizes, newCounts, rest')\n                  = assignToTestcases sortedSizes ([], cList) []\n      In an equation for \u2018minimizeTestcases\u2019:\n          minimizeTestcases n k mList cList\n            = (length testcases, testcases)\n            where\n                indexedSizes = zip [1 .. ] mList\n                sortedSizes = sortBy (comparing (Down . snd)) indexedSizes\n                assignTestcases :: [([Int], [Int])] -> [([Int], [Int])]\n                assignTestcases [] = []\n                assignTestcases ((sizes, counts) : rest)\n                  = (newSizes, newCounts) : assignTestcases rest'\n                  where\n                      (newSizes, newCounts, rest')\n                        = assignToTestcases sortedSizes ... ...\n                ....\n   |\n30 |     assignTestcases ((sizes, counts):rest) = (newSizes, newCounts) : assignTestcases rest'\n   |                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmptzgssece/Solution.hs:30:70: error:\n    \u2022 Couldn't match type \u2018Int\u2019 with \u2018[Int]\u2019\n      Expected type: [([[Int]], [Int])]\n        Actual type: [([Int], [Int])]\n    \u2022 In the second argument of \u2018(:)\u2019, namely \u2018assignTestcases rest'\u2019\n      In the expression: (newSizes, newCounts) : assignTestcases rest'\n      In an equation for \u2018assignTestcases\u2019:\n          assignTestcases ((sizes, counts) : rest)\n            = (newSizes, newCounts) : assignTestcases rest'\n            where\n                (newSizes, newCounts, rest')\n                  = assignToTestcases sortedSizes ([], cList) []\n   |\n30 |     assign"
+    },
+    {
+      "idx": 3,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmplnthjse7/Main.hs:10:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n10 | test_0 = (polygonAreaPairs [(1, 0), (4, 0), (4, 3), (1, 3)] == 9.00)\n   |           ^^^^^^^^^^^^^^^^\n\n/tmp/tmplnthjse7/Main.hs:13:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n13 | test_1 = (polygonAreaPairs [(0, 0), (1, 1), (1, 0)] == 0.50)\n   |           ^^^^^^^^^^^^^^^^\n\n/tmp/tmplnthjse7/Main.hs:16:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n16 | test_2 = (polygonAreaPairs [(1, 1), (2, 3), (3, 1)] == 2.00)\n   |           ^^^^^^^^^^^^^^^^\n\n/tmp/tmplnthjse7/Main.hs:19:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n19 | test_3 = (polygonAreaPairs [(0, 0), (1, 1), (2, 0), (1, -1)] == 2.00)\n   |           ^^^^^^^^^^^^^^^^\n\n/tmp/tmplnthjse7/Main.hs:22:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n22 | test_4 = (polygonAreaPairs [(0, 0), (0, 1), (1, 1), (1, 0)] == 1.00)\n   |           ^^^^^^^^^^^^^^^^\n\n/tmp/tmplnthjse7/Main.hs:25:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n25 | test_5 = (polygonAreaPairs [(0, 0), (2, 2), (2, 0)] == 2.00)\n   |           ^^^^^^^^^^^^^^^^\n\n/tmp/tmplnthjse7/Main.hs:28:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n28 | test_6 = (polygonAreaPairs [(1, 2), (3, 1), (4, 4), (1, 3)] == 5.00)\n   |           ^^^^^^^^^^^^^^^^\n\n/tmp/tmplnthjse7/Main.hs:31:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n31 | test_7 = (polygonAreaPairs [(0, 0), (3, 0), (3, 3), (0, 3)] == 9.00)\n   |           ^^^^^^^^^^^^^^^^\n\n/tmp/tmplnthjse7/Main.hs:34:11: error:\n    Variable not in scope:\n      polygonAreaPairs :: [(Integer, Integer)] -> Double\n   |\n34 | test_8 = "
+    },
+    {
+      "idx": 4,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp7ik7_15_/Solution.hs:99:5: error: parse error on input \u2018in\u2019\n   |\n99 |     in predMap\n   |     ^^\n"
+    },
+    {
+      "idx": 5,
+      "compiled": true,
+      "tests_passed": 13,
+      "tests_total": 13,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 6,
+      "compiled": true,
+      "tests_passed": 8,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 7,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 8,
+      "compiled": true,
+      "tests_passed": 1,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 9,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": "Execution timed out after 20 seconds."
+    },
+    {
+      "idx": 10,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpu9zbflo1/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import qualified Data.Map as Map\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 11,
+      "compiled": true,
+      "tests_passed": 16,
+      "tests_total": 16,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 12,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 13,
+      "compiled": true,
+      "tests_passed": 11,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 14,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpcj7ikjvp/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | main = do\n   | ^\n"
+    },
+    {
+      "idx": 15,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 16,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpfht0w70q/Solution.hs:16:1: error:\n    Could not find module \u2018Text.Regex.TDFA\u2019\n    Use -v (or `:set -v` in ghci) to see a list of the files searched for.\n   |\n16 | import Text.Regex.TDFA\n   | ^^^^^^^^^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 17,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 18,
+      "compiled": true,
+      "tests_passed": 2,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 19,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 20,
+      "compiled": true,
+      "tests_passed": 11,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 21,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 22,
+      "compiled": true,
+      "tests_passed": 8,
+      "tests_total": 8,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 23,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 24,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpq7mrd5op/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import Test.HUnit\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 25,
+      "compiled": true,
+      "tests_passed": 15,
+      "tests_total": 15,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 26,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpa3tm7obt/Solution.hs:33:42: error:\n    \u2022 Couldn't match type \u2018Int\u2019 with \u2018[Char]\u2019\n      Expected type: String\n        Actual type: Int\n    \u2022 In the second argument of \u2018hammingDistance\u2019, namely \u2018c2\u2019\n      In the first argument of \u2018(<=)\u2019, namely \u2018hammingDistance c1 c2\u2019\n      In the expression: hammingDistance c1 c2 <= k\n   |\n33 |     withinK c1 c2 k = hammingDistance c1 c2 <= k\n   |                                          ^^\n\n/tmp/tmpa3tm7obt/Solution.hs:33:48: error:\n    \u2022 Couldn't match type \u2018[Char]\u2019 with \u2018Int\u2019\n      Expected type: Int\n        Actual type: String\n    \u2022 In the second argument of \u2018(<=)\u2019, namely \u2018k\u2019\n      In the expression: hammingDistance c1 c2 <= k\n      In an equation for \u2018withinK\u2019:\n          withinK c1 c2 k = hammingDistance c1 c2 <= k\n   |\n33 |     withinK c1 c2 k = hammingDistance c1 c2 <= k\n   |                                                ^\n\n/tmp/tmpa3tm7obt/Solution.hs:36:29: error:\n    \u2022 Couldn't match expected type \u2018Int\u2019 with actual type \u2018Bool\u2019\n    \u2022 In the expression: sum $ zipWith (/=) s1 s2\n      In an equation for \u2018hammingDistance\u2019:\n          hammingDistance s1 s2 = sum $ zipWith (/=) s1 s2\n      In an equation for \u2018maxIdentifiableErrors\u2019:\n          maxIdentifiableErrors codes\n            | length codes == 1 = 6\n            | otherwise = maximum $ 0 : [k | k <- [0 .. 6], isUniqueForK k]\n            where\n                n = length codes\n                codeLength = 6\n                isUniqueForK :: Int -> Bool\n                isUniqueForK k\n                  = all (\\ code -> countCodesWithinK code k == 1) codes\n                ....\n   |\n36 |     hammingDistance s1 s2 = sum $ zipWith (/=) s1 s2\n   |                             ^^^^^^^^^^^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 27,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 28,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp3xcmjy9y/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import Data.List (sort)\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 29,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 30,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpc41gupri/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | validateString Nothing Nothing Nothing False True == (False, Left \"Cannot be None\")\n   | ^\n"
+    },
+    {
+      "idx": 31,
+      "compiled": true,
+      "tests_passed": 18,
+      "tests_total": 18,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 32,
+      "compiled": true,
+      "tests_passed": 11,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 33,
+      "compiled": true,
+      "tests_passed": 14,
+      "tests_total": 14,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 34,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 16,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpa6ccs2ff/Solution.hs:76:58: error: parse error on input \u2018)\u2019\n   |\n76 |                           (map (\\(name, (verts, voxels)) ) mergeMap)\n   |                                                          ^\n"
+    },
+    {
+      "idx": 35,
+      "compiled": true,
+      "tests_passed": 14,
+      "tests_total": 14,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 36,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 13,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpjjedg4nd/Solution.hs:28:6: error:\n    Not in scope: data constructor \u2018A1\u2019\n   |\n28 |     (A1, B1, C1, costA) = \n   |      ^^\n\n/tmp/tmpjjedg4nd/Solution.hs:28:10: error:\n    Not in scope: data constructor \u2018B1\u2019\n   |\n28 |     (A1, B1, C1, costA) = \n   |          ^^\n\n/tmp/tmpjjedg4nd/Solution.hs:28:14: error:\n    Not in scope: data constructor \u2018C1\u2019\n   |\n28 |     (A1, B1, C1, costA) = \n   |              ^^\n\n/tmp/tmpjjedg4nd/Solution.hs:28:18: error:\n    Conflicting definitions for \u2018costA\u2019\n    Bound at: /tmp/tmpjjedg4nd/Solution.hs:28:18-22\n              /tmp/tmpjjedg4nd/Solution.hs:48:18-22\n              /tmp/tmpjjedg4nd/Solution.hs:64:18-22\n   |\n28 |     (A1, B1, C1, costA) = \n   |                  ^^^^^^^^^...\n\n/tmp/tmpjjedg4nd/Solution.hs:29:11: error:\n    Not in scope: data constructor \u2018A'\u2019\n   |\n29 |       let A' = a\n   |           ^^\n\n/tmp/tmpjjedg4nd/Solution.hs:30:11: error:\n    Not in scope: data constructor \u2018B'\u2019\n   |\n30 |           B' = b\n   |           ^^\n\n/tmp/tmpjjedg4nd/Solution.hs:31:11: error:\n    Not in scope: data constructor \u2018C'\u2019\n   |\n31 |           C' = c\n   |           ^^\n\n/tmp/tmpjjedg4nd/Solution.hs:33:11: error:\n    Not in scope: data constructor \u2018AOptions\u2019\n   |\n33 |           AOptions = [d | d <- [1..A'], B' `mod` d == 0]\n   |           ^^^^^^^^\n\n/tmp/tmpjjedg4nd/Solution.hs:34:12: error:\n    Not in scope: data constructor \u2018A'\u2019\n   |\n34 |           (A', costA1) = minimumBy compareF [(d, abs (a - d)) | d <- AOptions]\n   |            ^^\n\n/tmp/tmpjjedg4nd/Solution.hs:37:11: error:\n    Not in scope: data constructor \u2018BOptions\u2019\n   |\n37 |           BOptions = [d | d <- [1..B'], d `mod` A' == 0]\n   |           ^^^^^^^^\n\n/tmp/tmpjjedg4nd/Solution.hs:38:12: error:\n    Not in scope: data constructor \u2018B'\u2019\n   |\n38 |           (B', costB) = minimumBy compareF [(d, abs (b - d)) | d <- BOptions]\n   |            ^^\n\n/tmp/tmpjjedg4nd/Solution.hs:41:11: error:\n    Not in scope: data constructor \u2018COptions\u2019\n   |\n41 |           COptions = [d | d <- [1..C'], d `"
+    },
+    {
+      "idx": 37,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 38,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp7o09ujyt/Solution.hs:88:21: error: parse error on input \u2018=\u2019\n   |\n88 |         foldDP dp p = \n   |                     ^\n"
+    },
+    {
+      "idx": 39,
+      "compiled": true,
+      "tests_passed": 4,
+      "tests_total": 4,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 40,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpkc9avv50/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | a1 = insertFibonacci [1,2,3] 49 == [0,1,2,3,5,8,13,21,34]\n   | ^\n"
+    },
+    {
+      "idx": 41,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 42,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpa43aewcz/Main.hs:67:100: error: parse error on input \u2018]\u2019\n   |\n67 | test_19 = (generateIdentifierTuples [\"Test5\"] \"uniprotaccession\" == [(\"uniprotaccession\", \"Test5\")]]}  assistant>NNjsonasterxmluserWhat type is the return value if you call `generateIdentifierTuples [)\n   |                                                                                                    ^\n"
+    },
+    {
+      "idx": 43,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 4,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpqhcq57dn/Solution.hs:24:5: error:\n    Conflicting definitions for \u2018maxEarnings\u2019\n    Bound at: /tmp/tmpqhcq57dn/Solution.hs:24:5-15\n              /tmp/tmpqhcq57dn/Solution.hs:39:5-15\n   |\n24 |     maxEarnings = sum $ take n $ concatMap (\\x -> replicate x x) maxSeats\n   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...\n\n/tmp/tmpqhcq57dn/Solution.hs:28:5: error:\n    Conflicting definitions for \u2018minEarnings\u2019\n    Bound at: /tmp/tmpqhcq57dn/Solution.hs:28:5-15\n              /tmp/tmpqhcq57dn/Solution.hs:42:5-15\n   |\n28 |     minEarnings = sum $ take n $ concatMap (\\x -> replicate x x) minSeats\n   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...\n"
+    },
+    {
+      "idx": 44,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 45,
+      "compiled": true,
+      "tests_passed": 4,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 46,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp3fglv_u6/Solution.hs:19:290: error:\n    parse error on input \u2018,\u2019\n   |\n19 |   | otherwise = maximum $ 0 : [1 + maxSequenceLength (a * k) y | a <- [x..y], let ks = [k | k <- [2..], a * k <= y], a * 2 >= a, a * 2 <= y, a * 2 > a, a * 2 <= y, a * 2 > a, a * 2 <= y, a * 2 > a, a * 2 <= y, a * 2 > a, a * 2 <= y, a * 2 > a, a * 2 <= y, a * 2 > a, a * 2 <= y, a * 2 > a], let maxK = maximum ks, a * maxK <= y] where\n   |                                                                                                                                                                                                                                                                                                  ^\n"
+    },
+    {
+      "idx": 47,
+      "compiled": true,
+      "tests_passed": 21,
+      "tests_total": 21,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 48,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpwawhuhez/Solution.hs:21:5: error:\n    Variable not in scope: guard :: Bool -> [a0]\n   |\n21 |     guard (redLines >= 1)\n   |     ^^^^^\n"
+    },
+    {
+      "idx": 49,
+      "compiled": true,
+      "tests_passed": 21,
+      "tests_total": 21,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 50,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 51,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 52,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 14,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpw0y6igwm/Main.hs:46:55: error:\n    \u2022 Couldn't match expected type \u2018Int -> Int -> (Int, Int)\u2019\n                  with actual type \u2018(Integer, Integer)\u2019\n    \u2022 In the second argument of \u2018(==)\u2019, namely \u2018(0, 3)\u2019\n      In the expression:\n        (sumAndCountWithinBounds [- 1, 0, 1] - 2 2 == (0, 3))\n      In an equation for \u2018test_12\u2019:\n          test_12 = (sumAndCountWithinBounds [- 1, 0, 1] - 2 2 == (0, 3))\n   |\n46 | test_12 = (sumAndCountWithinBounds [-1, 0, 1] -2 2 == (0, 3))\n   |                                                       ^^^^^^\n"
+    },
+    {
+      "idx": 53,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpx1z1fb21/Solution.hs:28:15: error:\n    Ambiguous occurrence \u2018Map.findWithDefault\u2019\n    It could refer to\n       either \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmpx1z1fb21/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmpx1z1fb21/Solution.hs:17:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n28 |   let perms = Map.findWithDefault (Map.findWithDefault Set.empty \"*\" rolePerms) (role user) rolePerms\n   |               ^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpx1z1fb21/Solution.hs:28:36: error:\n    Ambiguous occurrence \u2018Map.findWithDefault\u2019\n    It could refer to\n       either \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmpx1z1fb21/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmpx1z1fb21/Solution.hs:17:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n28 |   let perms = Map.findWithDefault (Map.findWithDefault Set.empty \"*\" rolePerms) (role user) rolePerms\n   |                                    ^^^^^^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 54,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 9,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp0uwlajo0/Solution.hs:18:1: error:\n    parse error on input \u2018import\u2019\n   |\n18 | import Data.List (foldl')\n   | ^^^^^^\n"
+    },
+    {
+      "idx": 55,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 9,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpy9ywnflw/Solution.hs:25:5: error:\n    parse error on input \u2018newtype\u2019\n   |\n25 |     newtype Down a = Down a\n   |     ^^^^^^^\n"
+    },
+    {
+      "idx": 56,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 57,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp5u3gqzqt/Solution.hs:29:29: error:\n    Ambiguous occurrence \u2018parseTime\u2019\n    It could refer to\n       either \u2018Data.Time.Format.parseTime\u2019,\n              imported from \u2018Data.Time.Format\u2019 at /tmp/tmp5u3gqzqt/Solution.hs:18:1-23\n              (and originally defined in \u2018time-1.9.3:Data.Time.Format.Parse\u2019)\n           or \u2018Solution.parseTime\u2019,\n              defined at /tmp/tmp5u3gqzqt/Solution.hs:22:1\n   |\n29 |   let startTimes = mapMaybe parseTime timestamps\n   |                             ^^^^^^^^^\n"
+    },
+    {
+      "idx": 58,
+      "compiled": true,
+      "tests_passed": 19,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 59,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpausys4l5/Main.hs:12:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n12 | (analyzeUserInteractions [\"login\", \"profile_view\", \"login\", \"settings\", \"login\", \"profile_view\"]) == Single \"login\")\n   | ^\n"
+    },
+    {
+      "idx": 60,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpfrjjociv/Solution.hs:34:29: error:\n    \u2022 Couldn't match expected type \u2018(a1, b)\u2019\n                  with actual type \u2018Set.Set Int -> (Int, Set.Set Int)\u2019\n    \u2022 Probable cause: \u2018dfs\u2019 is applied to too few arguments\n      In the expression: dfs graph colors u vAcc\n      In a pattern binding: (c, v') = dfs graph colors u vAcc\n      In the expression:\n        let (c, v') = dfs graph colors u vAcc in (cAcc + c, v')\n    \u2022 Relevant bindings include\n        c :: a1 (bound at /tmp/tmpfrjjociv/Solution.hs:34:20)\n        v' :: b (bound at /tmp/tmpfrjjociv/Solution.hs:34:23)\n   |\n34 |               let (c, v') = dfs graph colors u vAcc\n   |                             ^^^^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpfrjjociv/Solution.hs:34:48: error:\n    \u2022 Couldn't match expected type \u2018Int\u2019 with actual type \u2018Set.Set Int\u2019\n    \u2022 In the fourth argument of \u2018dfs\u2019, namely \u2018vAcc\u2019\n      In the expression: dfs graph colors u vAcc\n      In a pattern binding: (c, v') = dfs graph colors u vAcc\n   |\n34 |               let (c, v') = dfs graph colors u vAcc\n   |                                                ^^^^\n"
+    },
+    {
+      "idx": 61,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpq2aoprfz/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | import ExtractCliArgs\n   | ^\n"
+    },
+    {
+      "idx": 62,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 8,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmprdsqvuhy/Main.hs:31:11: error:\n    \u2022 No instance for (Eq MatchResults) arising from a use of \u2018==\u2019\n    \u2022 In the expression:\n        (getMatchResults\n           [\"Blues:1-Reds:2\", \"Greens:2-Blues:3\", \"Blues:2-Reds:2\",\n            \"Blues:0-Greens:0\"]\n           == MatchResults {wins = 1, draws = 2, losses = 1})\n      In an equation for \u2018test_7\u2019:\n          test_7\n            = (getMatchResults\n                 [\"Blues:1-Reds:2\", \"Greens:2-Blues:3\", \"Blues:2-Reds:2\", ....]\n                 == MatchResults {wins = 1, draws = 2, losses = 1})\n   |\n31 | test_7 = (getMatchResults [\"Blues:1-Reds:2\", \"Greens:2-Blues:3\", \"Blues:2-Reds:2\", \"Blues:0-Greens:0\"] == MatchResults { wins = 1, draws = 2, losses = 1 })\n   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 63,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmppwgkwa5i/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import Test.HUnit\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 64,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmppcs4s83r/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import InitWindow\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 65,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpog1asyhc/Solution.hs:47:52: error:\n    \u2022 Couldn't match expected type \u2018[p2] -> [(a2, b2, c2)]\u2019\n                  with actual type \u2018[Integer -> (Integer, Integer, Integer)]\u2019\n    \u2022 The function \u2018zipWith3\u2019 is applied to five arguments,\n      but its type \u2018(a\n                     -> p -> p1 -> Integer -> (Integer, Integer, Integer))\n                    -> [a] -> [p] -> [p1] -> [Integer -> (Integer, Integer, Integer)]\u2019\n      has only four\n      In the second argument of \u2018($)\u2019, namely\n        \u2018zipWith3\n           assign (map fst3 colsum) (repeat u) (repeat m) (repeat l)\u2019\n      In the expression:\n        unzip3\n          $ zipWith3\n              assign (map fst3 colsum) (repeat u) (repeat m) (repeat l)\n    \u2022 Relevant bindings include\n        upperRow :: [a2] (bound at /tmp/tmpog1asyhc/Solution.hs:47:10)\n        middleRow :: [b2] (bound at /tmp/tmpog1asyhc/Solution.hs:47:20)\n        lowerRow :: [c2] (bound at /tmp/tmpog1asyhc/Solution.hs:47:31)\n        l :: p2 (bound at /tmp/tmpog1asyhc/Solution.hs:45:29)\n        generateRows :: [(a, b, c)] -> p -> p1 -> p2 -> ([a1], [b1], [c1])\n          (bound at /tmp/tmpog1asyhc/Solution.hs:45:5)\n   |\n47 |         (upperRow, middleRow, lowerRow) = unzip3 $ zipWith3 assign (map fst3 colsum) (repeat u) (repeat m) (repeat l)\n   |                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpog1asyhc/Solution.hs:62:65: error:\n    \u2022 Couldn't match type \u2018Int\u2019 with \u2018(a0, b0, c0)\u2019\n      Expected type: [(a0, b0, c0)]\n        Actual type: [Int]\n    \u2022 In the first argument of \u2018generateRows\u2019, namely \u2018colsum\u2019\n      In the expression: generateRows colsum upper middle lower\n      In a pattern binding:\n        (upperRow, middleRow, lowerRow)\n          = generateRows colsum upper middle lower\n   |\n62 |              let (upperRow, middleRow, lowerRow) = generateRows colsum upper middle lower\n   |                                                                 ^^^^^^\n"
+    },
+    {
+      "idx": 66,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 15,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp4eqjvvfw/Solution.hs:24:5: error:\n    \u2022 Non type-variable argument in the constraint: Num [a]\n      (Use FlexibleContexts to permit this)\n    \u2022 When checking the inferred type\n        or :: forall a p. Num [a] => [a] -> p -> [a]\n      In an equation for \u2018productOfPrimes\u2019:\n          productOfPrimes xs\n            = product (filter isPrime xs) `or` 1\n            where\n                or [] _ = 1\n                or ps _ = ps\n   |\n24 |     or [] _ = 1\n   |     ^^^^^^^^^^^...\n"
+    },
+    {
+      "idx": 67,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmppvo04tfn/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | let input = M.fromList [(\"a\", Dict (M.fromList [(\"b\", SVal \"c\")]))]\n   | ^\n"
+    },
+    {
+      "idx": 68,
+      "compiled": true,
+      "tests_passed": 13,
+      "tests_total": 13,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 69,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 70,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 71,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpwjrxkph3/Solution.hs:26:20: error:\n    Ambiguous occurrence \u2018Map.fromList\u2019\n    It could refer to\n       either \u2018Map.fromList\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmpwjrxkph3/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.fromList\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmpwjrxkph3/Solution.hs:18:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n26 |     initialGraph = Map.fromList [(i, []) | i <- [1..n]]\n   |                    ^^^^^^^^^^^^\n\n/tmp/tmpwjrxkph3/Solution.hs:29:14: error:\n    Ambiguous occurrence \u2018Map.adjust\u2019\n    It could refer to\n       either \u2018Map.adjust\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmpwjrxkph3/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.adjust\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmpwjrxkph3/Solution.hs:18:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n29 |         g' = Map.adjust (v:) u $ Map.adjust (u:) v g\n   |              ^^^^^^^^^^\n\n/tmp/tmpwjrxkph3/Solution.hs:29:34: error:\n    Ambiguous occurrence \u2018Map.adjust\u2019\n    It could refer to\n       either \u2018Map.adjust\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmpwjrxkph3/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.adjust\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmpwjrxkph3/Solution.hs:18:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n29 |         g' = Map.adjust (v:) u $ Map.adjust (u:) v g\n   |                                  ^^^^^^^^^^\n"
+    },
+    {
+      "idx": 72,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpr8kksd5b/Solution.hs:16:44: error:\n    Not in scope: type constructor or class \u2018TreeNode\u2019\n   |\n16 | bottomUpLexicographicalLevelOrder :: Maybe TreeNode -> [[Int]]\n   |                                            ^^^^^^^^\n\n/tmp/tmpr8kksd5b/Solution.hs:20:19: error:\n    Not in scope: type constructor or class \u2018TreeNode\u2019\n   |\n20 |     bfs :: [Maybe TreeNode] -> [[TreeNode]]\n   |                   ^^^^^^^^\n\n/tmp/tmpr8kksd5b/Solution.hs:20:34: error:\n    Not in scope: type constructor or class \u2018TreeNode\u2019\n   |\n20 |     bfs :: [Maybe TreeNode] -> [[TreeNode]]\n   |                                  ^^^^^^^^\n\n/tmp/tmpr8kksd5b/Solution.hs:29:17: error:\n    Not in scope: type constructor or class \u2018TreeNode\u2019\n   |\n29 |     levels :: [[TreeNode]]\n   |                 ^^^^^^^^\n\n/tmp/tmpr8kksd5b/Solution.hs:33:23: error:\n    Not in scope: type constructor or class \u2018TreeNode\u2019\n   |\n33 |     sortedLevels :: [[TreeNode]]\n   |                       ^^^^^^^^\n"
+    },
+    {
+      "idx": 73,
+      "compiled": true,
+      "tests_passed": 15,
+      "tests_total": 15,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 74,
+      "compiled": true,
+      "tests_passed": 19,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 75,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpop7gwcxh/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import Test.HUnit\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 76,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmps05utbwp/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | import Test.HUnit\n   | ^\n"
+    },
+    {
+      "idx": 77,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 78,
+      "compiled": true,
+      "tests_passed": 12,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 79,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 80,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp8uktu3u2/Solution.hs:17:193: error:\n    parse error on input \u2018=\u2019\n   |\n17 | maxNodesCollected x0 y0 ax ay bx by xs ys t = maximum $ 0 : [ countNodes startX startY | startX <- [xs - t .. xs + t], startY <- [ys - t .. ys + t], let startPos = (startX, startY), startDist = abs (xs - startX) + abs (ys - startY), startDist <= t, let nodes = generateNodes x0 y0 ax ay bx by t, let countNodes (cx, cy) = length $ filter (\\(nx, ny) -> canReach (cx, cy) (nx, ny) t) nodes]\n   |                                                                                                                                                                                                 ^\n"
+    },
+    {
+      "idx": 81,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 17,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp_jc75hq9/Solution.hs:30:14: error:\n    Ambiguous occurrence \u2018Map.insertWith\u2019\n    It could refer to\n       either \u2018Map.insertWith\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmp_jc75hq9/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.insertWith\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmp_jc75hq9/Solution.hs:16:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n30 |           in Map.insertWith (+) userId playCount acc\n   |              ^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 82,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 9,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpc89i4uw_/Solution.hs:40:103: error:\n    parse error on input \u2018V.!\u2019\n   |\n40 |     matMul a b = V.map (\\row -> V.map (\\col -> V.sum $ V.zipWith (*) row col) (V.generate size (\\i -> V.! i b))) a\n   |                                                                                                       ^^^\n"
+    },
+    {
+      "idx": 83,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpcy89v9do/Solution.hs:36:5: error: parse error on input \u2018in\u2019\n   |\n36 |     in case matchResult of\n   |     ^^\n"
+    },
+    {
+      "idx": 84,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp6wrhyxcv/Solution.hs:19:41: error:\n    Ambiguous occurrence \u2018Map.findWithDefault\u2019\n    It could refer to\n       either \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmp6wrhyxcv/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmp6wrhyxcv/Solution.hs:16:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n19 | decodeMessage ints mapping = map (\\i -> Map.findWithDefault '?' i mapping) ints\n   |                                         ^^^^^^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 85,
+      "compiled": true,
+      "tests_passed": 10,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 86,
+      "compiled": true,
+      "tests_passed": 4,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 87,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpqcskh53h/Main.hs:22:82: error:\n    Not in scope: data constructor \u2018ErrorCall\u2019\n   |\n22 | test_4 = ((catch (evaluate (calculateCarbonSavings 20 \"trees\")) (\\e -> case e of ErrorCall _ -> return True; _ -> return False)) >>= (\\r -> return (r == True)))\n   |                                                                                  ^^^^^^^^^\n"
+    },
+    {
+      "idx": 88,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpvgbwzfl6/Main.hs:10:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n10 | test_0 = (makePalindrome \"race\" == \"racecar\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:13:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n13 | test_1 = (makePalindrome \"a\" == \"a\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:16:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n16 | test_2 = (makePalindrome \"ab\" == \"aba\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:19:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n19 | test_3 = (makePalindrome \"abc\" == \"abcba\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:22:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n22 | test_4 = (makePalindrome \"\" == \"\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:25:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n25 | test_5 = (makePalindrome \"civic\" == \"civic\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:28:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n28 | test_6 = (makePalindrome \"level\" == \"level\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:31:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n31 | test_7 = (makePalindrome \"hello\" == \"hellolleh\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:34:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n34 | test_8 = (makePalindrome \"12321\" == \"12321\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:37:11: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n37 | test_9 = (makePalindrome \"123\" == \"12321\")\n   |           ^^^^^^^^^^^^^^\n\n/tmp/tmpvgbwzfl6/Main.hs:40:12: error:\n    Variable not in scope: makePalindrome :: [Char] -> [Char]\n   |\n40 | test_10 = (makePalindrome \"madam\" == \"ma"
+    },
+    {
+      "idx": 89,
+      "compiled": true,
+      "tests_passed": 19,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 90,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp8mflr310/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import qualified Data.Map as M\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 91,
+      "compiled": true,
+      "tests_passed": 9,
+      "tests_total": 9,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 92,
+      "compiled": true,
+      "tests_passed": 17,
+      "tests_total": 17,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 93,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 94,
+      "compiled": true,
+      "tests_passed": 12,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 95,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 96,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp3ufi_kxc/Solution.hs:22:82: error:\n    \u2022 Occurs check: cannot construct the infinite type: a ~ [a]\n      Expected type: [[a]]\n        Actual type: [a]\n    \u2022 In the second argument of \u2018map\u2019, namely \u2018subsequences\u2019\n      In the second argument of \u2018maximumBy\u2019, namely\n        \u2018(map (x :) subsequences)\u2019\n      In the expression: maximumBy compareLength (map (x :) subsequences)\n    \u2022 Relevant bindings include\n        subsequences :: [a] (bound at /tmp/tmp3ufi_kxc/Solution.hs:21:9)\n        xs :: [a] (bound at /tmp/tmp3ufi_kxc/Solution.hs:20:12)\n        x :: a (bound at /tmp/tmp3ufi_kxc/Solution.hs:20:10)\n        lis :: [a] -> [a] (bound at /tmp/tmp3ufi_kxc/Solution.hs:19:5)\n   |\n22 |         in (if null subsequences then [x] else maximumBy compareLength (map (x:) subsequences))\n   |                                                                                  ^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 97,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpey6l345n/Solution.hs:18:1: error:\n    \u2022 No parameters for class \u2018PluginBase\u2019\n      (Enable MultiParamTypeClasses to allow no-parameter classes)\n    \u2022 In the class declaration for \u2018PluginBase\u2019\n   |\n18 | class PluginBase where\n   | ^^^^^^^^^^^^^^^^^^^^^^...\n\n/tmp/tmpey6l345n/Solution.hs:22:25: error:\n    \u2022 Expected kind \u2018* -> Constraint\u2019,\n        but \u2018PluginBase\u2019 has kind \u2018Constraint\u2019\n    \u2022 In the definition of data constructor \u2018Plugin\u2019\n      In the data declaration for \u2018Plugin\u2019\n   |\n22 | data Plugin = forall p. PluginBase p => Plugin p\n   |                         ^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 98,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp8hpwfz93/Solution.hs:18:1: error:\n    Could not find module \u2018Data.Aeson\u2019\n    Perhaps you meant Data.Version (from base-4.13.0.0)\n    Use -v (or `:set -v` in ghci) to see a list of the files searched for.\n   |\n18 | import Data.Aeson (Value(..))\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 99,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 100,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 101,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp87gu4v0q/Solution.hs:22:9: error:\n    \u2022 Non type-variable argument\n        in the constraint: MArray IOArray Int m\n      (Use FlexibleContexts to permit this)\n    \u2022 When checking the inferred type\n        loop :: forall (m :: * -> *).\n                MArray IOArray Int m =>\n                Int -> Int -> m ()\n      In the expression:\n        do (start, end) <- getBounds arr\n           let loop i j\n                 | i >= j = return ()\n                 | otherwise = ...\n           loop start end\n           return arr\n      In an equation for \u2018reverseList\u2019:\n          reverseList arr\n            = do (start, end) <- getBounds arr\n                 let loop i j\n                       | i >= j = ...\n                       | otherwise = ...\n                 loop start end\n                 ....\n   |\n22 |     let loop i j\n   |         ^^^^^^^^...\n"
+    },
+    {
+      "idx": 102,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 8,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 103,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 4,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpfdtxj0ic/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import qualified Data.Map as Map\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 104,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 105,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 13,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpxtwdv6og/Solution.hs:23:43: error:\n    \u2022 Ambiguous type variable \u2018t0\u2019 arising from a use of \u2018^\u2019\n      prevents the constraint \u2018(Num t0)\u2019 from being solved.\n      Relevant bindings include\n        squaredDiffs :: [t0] (bound at /tmp/tmpxtwdv6og/Solution.hs:23:11)\n      Probable fix: use a type annotation to specify what \u2018t0\u2019 should be.\n      These potential instances exist:\n        instance Num a => Num (Down a) -- Defined in \u2018Data.Ord\u2019\n        instance Num Integer -- Defined in \u2018GHC.Num\u2019\n        instance Num Double -- Defined in \u2018GHC.Float\u2019\n        ...plus three others\n        ...plus 10 instances involving out-of-scope types\n        (use -fprint-potential-instances to see them all)\n    \u2022 In the expression: (fromIntegral (a - b)) ^ 2\n      In the first argument of \u2018zipWith\u2019, namely\n        \u2018(\\ a b -> (fromIntegral (a - b)) ^ 2)\u2019\n      In the expression:\n        zipWith (\\ a b -> (fromIntegral (a - b)) ^ 2) y_true y_pred\n   |\n23 |       let squaredDiffs = zipWith (\\a b -> (fromIntegral (a - b)) ^ 2) y_true y_pred\n   |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpxtwdv6og/Solution.hs:24:17: error:\n    \u2022 Ambiguous type variable \u2018t0\u2019 arising from a use of \u2018sum\u2019\n      prevents the constraint \u2018(Num t0)\u2019 from being solved.\n      Relevant bindings include\n        mse :: t0 (bound at /tmp/tmpxtwdv6og/Solution.hs:24:11)\n        squaredDiffs :: [t0] (bound at /tmp/tmpxtwdv6og/Solution.hs:23:11)\n      Probable fix: use a type annotation to specify what \u2018t0\u2019 should be.\n      These potential instances exist:\n        instance Num a => Num (Down a) -- Defined in \u2018Data.Ord\u2019\n        instance Num Integer -- Defined in \u2018GHC.Num\u2019\n        instance Num Double -- Defined in \u2018GHC.Float\u2019\n        ...plus three others\n        ...plus 10 instances involving out-of-scope types\n        (use -fprint-potential-instances to see them all)\n    \u2022 In the first argument of \u2018(/)\u2019, namely \u2018sum squaredDiffs\u2019\n      In the expression: sum squaredDiffs / fromIntegral ("
+    },
+    {
+      "idx": 106,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp32qy0oqd/Solution.hs:29:14: error:\n    \u2022 Couldn't match type \u2018(String, Int, Int, String)\u2019\n                     with \u2018(String, String, Int, Int, String)\u2019\n      Expected type: Map String ExonInfo\n        Actual type: Map String (String, Int, Int, String)\n    \u2022 In the expression:\n        Map.insert edgeID (chrom, startPos, endPos, strand) acc\n      In the expression:\n        let\n          startPos = min pos1 pos2\n          endPos = max pos1 pos2\n        in Map.insert edgeID (chrom, startPos, endPos, strand) acc\n      In an equation for \u2018insertExon\u2019:\n          insertExon (edgeType, edgeID, chrom, pos1, pos2, strand) acc\n            | edgeType == \"exon\"\n            = let\n                startPos = min pos1 pos2\n                endPos = max pos1 pos2\n              in Map.insert edgeID (chrom, startPos, endPos, strand) acc\n            | otherwise = acc\n   |\n29 |           in Map.insert edgeID (chrom, startPos, endPos, strand) acc\n   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmp32qy0oqd/Solution.hs:29:66: error:\n    \u2022 Couldn't match type \u2018(String, String, Int, Int, String)\u2019\n                     with \u2018(String, Int, Int, String)\u2019\n      Expected type: Map String (String, Int, Int, String)\n        Actual type: Map String ExonInfo\n    \u2022 In the third argument of \u2018Map.insert\u2019, namely \u2018acc\u2019\n      In the expression:\n        Map.insert edgeID (chrom, startPos, endPos, strand) acc\n      In the expression:\n        let\n          startPos = min pos1 pos2\n          endPos = max pos1 pos2\n        in Map.insert edgeID (chrom, startPos, endPos, strand) acc\n   |\n29 |           in Map.insert edgeID (chrom, startPos, endPos, strand) acc\n   |                                                                  ^^^\n"
+    },
+    {
+      "idx": 107,
+      "compiled": true,
+      "tests_passed": 8,
+      "tests_total": 8,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 108,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 109,
+      "compiled": true,
+      "tests_passed": 10,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 110,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpf7eeqkab/Solution.hs:17:1: error:\n    Could not find module \u2018Data.Aeson\u2019\n    Perhaps you meant Data.Version (from base-4.13.0.0)\n    Use -v (or `:set -v` in ghci) to see a list of the files searched for.\n   |\n17 | import Data.Aeson (Value(..))\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpf7eeqkab/Solution.hs:18:1: error:\n    Could not find module \u2018Data.Vector\u2019\n    Perhaps you meant Data.Functor (from base-4.13.0.0)\n    Use -v (or `:set -v` in ghci) to see a list of the files searched for.\n   |\n18 | import Data.Vector (fromList)\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 111,
+      "compiled": true,
+      "tests_passed": 11,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 112,
+      "compiled": true,
+      "tests_passed": 12,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 113,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 114,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 115,
+      "compiled": true,
+      "tests_passed": 8,
+      "tests_total": 8,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 116,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpcb88mj94/Solution.hs:17:17: error:\n    Not in scope: data constructor \u2018X\u2019\n   |\n17 | calculateChange X idxA idxB growthRate halfSaturation =\n   |                 ^\n\n/tmp/tmpcb88mj94/Solution.hs:18:7: error:\n    Not in scope: data constructor \u2018A\u2019\n   |\n18 |   let A = X !! idxA\n   |       ^\n\n/tmp/tmpcb88mj94/Solution.hs:19:7: error:\n    Not in scope: data constructor \u2018B\u2019\n   |\n19 |       B = X !! idxB\n   |       ^\n"
+    },
+    {
+      "idx": 117,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 118,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 4,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpuqclao1t/Solution.hs:27:26: error:\n    \u2022 Could not deduce (Num t0) arising from a use of \u2018fromIntegral\u2019\n      from the context: (Integral a, Integral a1)\n        bound by the inferred type of\n                   computeEfficiency :: (Integral a, Integral a1) =>\n                                        (a2, b, c, d, [(a3, b1, a, a1)]) -> Double\n        at /tmp/tmpuqclao1t/Solution.hs:(22,5)-(32,52)\n      The type variable \u2018t0\u2019 is ambiguous\n      Relevant bindings include\n        efficiencies :: [t0] (bound at /tmp/tmpuqclao1t/Solution.hs:27:9)\n      These potential instances exist:\n        instance Num a => Num (Down a) -- Defined in \u2018Data.Ord\u2019\n        instance Num Integer -- Defined in \u2018GHC.Num\u2019\n        instance Num Double -- Defined in \u2018GHC.Float\u2019\n        ...plus three others\n        ...plus 10 instances involving out-of-scope types\n        (use -fprint-potential-instances to see them all)\n    \u2022 In the first argument of \u2018(/)\u2019, namely \u2018fromIntegral e\u2019\n      In the expression: fromIntegral e / fromIntegral t'\n      In the expression:\n        [fromIntegral e / fromIntegral t' | (_, _, e, t') <- roads, t' > 0]\n   |\n27 |         efficiencies = [ fromIntegral e / fromIntegral t'\n   |                          ^^^^^^^^^^^^^^\n\n/tmp/tmpuqclao1t/Solution.hs:27:26: error:\n    \u2022 Could not deduce (Fractional t0) arising from a use of \u2018/\u2019\n      from the context: (Integral a, Integral a1)\n        bound by the inferred type of\n                   computeEfficiency :: (Integral a, Integral a1) =>\n                                        (a2, b, c, d, [(a3, b1, a, a1)]) -> Double\n        at /tmp/tmpuqclao1t/Solution.hs:(22,5)-(32,52)\n      The type variable \u2018t0\u2019 is ambiguous\n      Relevant bindings include\n        efficiencies :: [t0] (bound at /tmp/tmpuqclao1t/Solution.hs:27:9)\n      These potential instances exist:\n        instance Fractional Double -- Defined in \u2018GHC.Float\u2019\n        instance Fractional Float -- Defined in \u2018GHC.Float\u2019\n        ...plus one instance involving out-"
+    },
+    {
+      "idx": 119,
+      "compiled": true,
+      "tests_passed": 19,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 120,
+      "compiled": true,
+      "tests_passed": 12,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 121,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmphorcffm3/Solution.hs:19:23: error:\n    Not in scope: type variable \u2018k\u2019\n   |\n19 | type IntMap = Map.Map k [Int]\n   |                       ^\n"
+    },
+    {
+      "idx": 122,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpsh_k_es6/Solution.hs:125:18: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n    |\n125 |     (k, arrFinal)\n    |                  ^\n"
+    },
+    {
+      "idx": 123,
+      "compiled": true,
+      "tests_passed": 21,
+      "tests_total": 21,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 124,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpvn6r1750/Solution.hs:23:60: error:\n    Not in scope: type constructor or class \u2018Invalid\u2019\n   |\n23 |     mInvalidTypeRep <- try (evaluate (typeOf (undefined :: Invalid))) :: IO (Either SomeException TypeRep)\n   |                                                            ^^^^^^^\n"
+    },
+    {
+      "idx": 125,
+      "compiled": true,
+      "tests_passed": 12,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 126,
+      "compiled": true,
+      "tests_passed": 17,
+      "tests_total": 17,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 127,
+      "compiled": true,
+      "tests_passed": 12,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 128,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpvo6x11d9/Solution.hs:27:49: error:\n    \u2022 No instance for (Num (Int, Int)) arising from the literal \u20180\u2019\n    \u2022 In the second argument of \u2018replicate\u2019, namely \u20180\u2019\n      In the expression: replicate n 0\n      In the expression: ([(i, i) | i <- [1 .. n]], replicate n 0)\n   |\n27 | ufInit n = ([(i, i) | i <- [1..n]], replicate n 0)\n   |                                                 ^\n"
+    },
+    {
+      "idx": 129,
+      "compiled": true,
+      "tests_passed": 15,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 130,
+      "compiled": true,
+      "tests_passed": 9,
+      "tests_total": 9,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 131,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 132,
+      "compiled": true,
+      "tests_passed": 16,
+      "tests_total": 16,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 133,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpjc4mhagg/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import qualified Data.Map.Strict as Map\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 134,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp30pl5kw9/Solution.hs:27:33: error:\n    Ambiguous occurrence \u2018Map.insertWith\u2019\n    It could refer to\n       either \u2018Map.insertWith\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmp30pl5kw9/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.insertWith\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmp30pl5kw9/Solution.hs:19:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n27 |                                 Map.insertWith (++) from [(to, time)] acc)\n   |                                 ^^^^^^^^^^^^^^\n\n/tmp/tmp30pl5kw9/Solution.hs:40:33: error:\n    Ambiguous occurrence \u2018Map.findWithDefault\u2019\n    It could refer to\n       either \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmp30pl5kw9/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmp30pl5kw9/Solution.hs:19:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n40 |                 let neighbors = Map.findWithDefault [] current adjacency\n   |                                 ^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmp30pl5kw9/Solution.hs:47:51: error:\n    Ambiguous occurrence \u2018Map.findWithDefault\u2019\n    It could refer to\n       either \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmp30pl5kw9/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.findWithDefault\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmp30pl5kw9/Solution.hs:19:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n47 |                                         oldDist = Map.findWithDefault maxBound neighbor distAcc\n   |                                                   ^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmp30pl5kw9/Solution.hs:49:47: error:\n    Amb"
+    },
+    {
+      "idx": 135,
+      "compiled": true,
+      "tests_passed": 1,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 136,
+      "compiled": true,
+      "tests_passed": 16,
+      "tests_total": 16,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 137,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 8,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmprmimu4fl/Solution.hs:31:1: error:\n    parse error on input \u2018import\u2019\n   |\n31 | import Data.List (nub)\n   | ^^^^^^\n"
+    },
+    {
+      "idx": 138,
+      "compiled": true,
+      "tests_passed": 11,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 139,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 19,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmphybjapwu/Solution.hs:27:1: error:\n    parse error on input \u2018import\u2019\n   |\n27 | import Data.List (isPrefixOf)\n   | ^^^^^^\n"
+    },
+    {
+      "idx": 140,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpai_6a58v/Solution.hs:19:24: error:\n    Ambiguous occurrence \u2018Map.map\u2019\n    It could refer to\n       either \u2018Map.map\u2019,\n              imported qualified from \u2018Data.Map.Strict\u2019 at /tmp/tmpai_6a58v/Solution.hs:8:1-39\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n           or \u2018Map.map\u2019,\n              imported qualified from \u2018Data.Map\u2019 at /tmp/tmpai_6a58v/Solution.hs:16:1-32\n              (and originally defined in \u2018Data.Map.Internal\u2019)\n   |\n19 | calculateTotalScores = Map.map sum\n   |                        ^^^^^^^\n"
+    },
+    {
+      "idx": 141,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 16,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpgqnbv2e9/Solution.hs:21:50: error:\n    \u2022 Couldn't match type \u2018Int\u2019 with \u2018t0 Integer\u2019\n      Expected type: [t0 Integer]\n        Actual type: [Int]\n    \u2022 In the second argument of \u2018any\u2019, namely \u2018allEvents\u2019\n      In the expression: any exceedsLimit allEvents\n      In the expression:\n        if any exceedsLimit allEvents then \"NG\" else \"OK\"\n    \u2022 Relevant bindings include\n        exceedsLimit :: t0 Integer -> Bool\n          (bound at /tmp/tmpgqnbv2e9/Solution.hs:30:9)\n   |\n21 |     checkDataset crossings = if any exceedsLimit allEvents then \"NG\" else \"OK\"\n   |                                                  ^^^^^^^^^\n"
+    },
+    {
+      "idx": 142,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpebqotmm5/Solution.hs:21:25: error:\n    Ambiguous occurrence \u2018insert\u2019\n    It could refer to\n       either \u2018Data.List.insert\u2019,\n              imported from \u2018Data.List\u2019 at /tmp/tmpebqotmm5/Solution.hs:3:1-16\n              (and originally defined in \u2018base-4.13.0.0:Data.OldList\u2019)\n           or \u2018Solution.insert\u2019,\n              defined at /tmp/tmpebqotmm5/Solution.hs:19:1\n   |\n21 |   | x < v     = Node v (insert x left) right\n   |                         ^^^^^^\n\n/tmp/tmpebqotmm5/Solution.hs:22:30: error:\n    Ambiguous occurrence \u2018insert\u2019\n    It could refer to\n       either \u2018Data.List.insert\u2019,\n              imported from \u2018Data.List\u2019 at /tmp/tmpebqotmm5/Solution.hs:3:1-16\n              (and originally defined in \u2018base-4.13.0.0:Data.OldList\u2019)\n           or \u2018Solution.insert\u2019,\n              defined at /tmp/tmpebqotmm5/Solution.hs:19:1\n   |\n22 |   | x > v     = Node v left (insert x right)\n   |                              ^^^^^^\n\n/tmp/tmpebqotmm5/Solution.hs:28:25: error:\n    Ambiguous occurrence \u2018delete\u2019\n    It could refer to\n       either \u2018Data.List.delete\u2019,\n              imported from \u2018Data.List\u2019 at /tmp/tmpebqotmm5/Solution.hs:3:1-16\n              (and originally defined in \u2018base-4.13.0.0:Data.OldList\u2019)\n           or \u2018Solution.delete\u2019,\n              defined at /tmp/tmpebqotmm5/Solution.hs:26:1\n   |\n28 |   | x < v     = Node v (delete x left) right\n   |                         ^^^^^^\n\n/tmp/tmpebqotmm5/Solution.hs:29:30: error:\n    Ambiguous occurrence \u2018delete\u2019\n    It could refer to\n       either \u2018Data.List.delete\u2019,\n              imported from \u2018Data.List\u2019 at /tmp/tmpebqotmm5/Solution.hs:3:1-16\n              (and originally defined in \u2018base-4.13.0.0:Data.OldList\u2019)\n           or \u2018Solution.delete\u2019,\n              defined at /tmp/tmpebqotmm5/Solution.hs:26:1\n   |\n29 |   | x > v     = Node v left (delete x right)\n   |                              ^^^^^^\n\n/tmp/tmpebqotmm5/Solution.hs:35:48: error:\n    Ambiguous occurrence \u2018delete\u2019\n    It could refer to\n       either \u2018Data.Li"
+    },
+    {
+      "idx": 143,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 144,
+      "compiled": true,
+      "tests_passed": 14,
+      "tests_total": 14,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 145,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 146,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 147,
+      "compiled": true,
+      "tests_passed": 13,
+      "tests_total": 17,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 148,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": "Execution timed out after 20 seconds."
+    },
+    {
+      "idx": 149,
+      "compiled": true,
+      "tests_passed": 18,
+      "tests_total": 18,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 150,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmprilnm8k3/Main.hs:12:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n12 | main = do\n   | ^\n"
+    },
+    {
+      "idx": 151,
+      "compiled": true,
+      "tests_passed": 21,
+      "tests_total": 21,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 152,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp6fhqv1d_/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | let spots1 = [Spot \"Spot A\" 10 5, Spot \"Spot B\" 5 10, Spot \"Spot C\" 15 10, Spot \"Spot D\" 8 3] in\n   | ^\n"
+    },
+    {
+      "idx": 153,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 18,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpl809dqbn/Main.hs:10:35: error:\n    \u2022 Couldn't match expected type \u2018[(Int, Int)]\u2019\n                  with actual type \u2018(Integer, Integer)\u2019\n    \u2022 In the expression: (1, 2)\n      In the expression: [(1, 2)]\n      In the first argument of \u2018retrieveContourValues\u2019, namely\n        \u2018[[(1, 2)], [(3, 4)]]\u2019\n   |\n10 | test_0 = (retrieveContourValues [[(1,2)], [(3,4)]] [10,20] == [10,20])\n   |                                   ^^^^^\n\n/tmp/tmpl809dqbn/Main.hs:10:44: error:\n    \u2022 Couldn't match expected type \u2018[(Int, Int)]\u2019\n                  with actual type \u2018(Integer, Integer)\u2019\n    \u2022 In the expression: (3, 4)\n      In the expression: [(3, 4)]\n      In the first argument of \u2018retrieveContourValues\u2019, namely\n        \u2018[[(1, 2)], [(3, 4)]]\u2019\n   |\n10 | test_0 = (retrieveContourValues [[(1,2)], [(3,4)]] [10,20] == [10,20])\n   |                                            ^^^^^\n\n/tmp/tmpl809dqbn/Main.hs:16:35: error:\n    \u2022 Couldn't match expected type \u2018[(Int, Int)]\u2019\n                  with actual type \u2018(Integer, Integer)\u2019\n    \u2022 In the expression: (1, 1)\n      In the expression: [(1, 1)]\n      In the first argument of \u2018retrieveContourValues\u2019, namely\n        \u2018[[(1, 1)]]\u2019\n   |\n16 | test_2 = (retrieveContourValues [[(1,1)]] [42] == [42])\n   |                                   ^^^^^\n\n/tmp/tmpl809dqbn/Main.hs:19:35: error:\n    \u2022 Couldn't match expected type \u2018[(Int, Int)]\u2019\n                  with actual type \u2018(Integer, Integer)\u2019\n    \u2022 In the expression: (- 1, - 1)\n      In the expression: [(- 1, - 1), (2, 2)]\n      In the first argument of \u2018retrieveContourValues\u2019, namely\n        \u2018[[(- 1, - 1), (2, 2)]]\u2019\n   |\n19 | test_3 = (retrieveContourValues [[(-1,-1),(2,2)]] [99] == [99])\n   |                                   ^^^^^^^\n\n/tmp/tmpl809dqbn/Main.hs:19:43: error:\n    \u2022 Couldn't match expected type \u2018[(Int, Int)]\u2019\n                  with actual type \u2018(Integer, Integer)\u2019\n    \u2022 In the expression: (2, 2)\n      In the expression: [(- 1, - 1), (2, 2)]\n      In the first argument of \u2018retrieveContourValu"
+    },
+    {
+      "idx": 154,
+      "compiled": true,
+      "tests_passed": 10,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 155,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 156,
+      "compiled": true,
+      "tests_passed": 4,
+      "tests_total": 4,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 157,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 158,
+      "compiled": true,
+      "tests_passed": 8,
+      "tests_total": 8,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 159,
+      "compiled": true,
+      "tests_passed": 12,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 160,
+      "compiled": true,
+      "tests_passed": 17,
+      "tests_total": 17,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 161,
+      "compiled": true,
+      "tests_passed": 9,
+      "tests_total": 9,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 162,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpcnit0jaj/Main.hs:55:35: error:\n    \u2022 Couldn't match expected type \u2018Int\u2019 with actual type \u2018Double\u2019\n    \u2022 In the second argument of \u2018multiply\u2019, namely \u2018(0.01 :: Double)\u2019\n      In the first argument of \u2018(==)\u2019, namely\n        \u2018multiply (100 :: Int) (0.01 :: Double)\u2019\n      In the expression: (multiply (100 :: Int) (0.01 :: Double) == 1.0)\n   |\n55 | test_15 = (multiply (100 :: Int) (0.01 :: Double) == 1.0)\n   |                                   ^^^^^^^^^^^^^^\n\n/tmp/tmpcnit0jaj/Main.hs:64:39: error:\n    \u2022 Couldn't match expected type \u2018Double\u2019 with actual type \u2018Int\u2019\n    \u2022 In the second argument of \u2018multiply\u2019, namely \u2018(2 :: Int)\u2019\n      In the first argument of \u2018(==)\u2019, namely\n        \u2018multiply (3.14 :: Double) (2 :: Int)\u2019\n      In the expression: (multiply (3.14 :: Double) (2 :: Int) == 6.28)\n   |\n64 | test_18 = (multiply (3.14 :: Double) (2 :: Int) == 6.28)\n   |                                       ^^^^^^^^\n\n/tmp/tmpcnit0jaj/Main.hs:67:40: error:\n    \u2022 Couldn't match expected type \u2018Double\u2019 with actual type \u2018Int\u2019\n    \u2022 In the second argument of \u2018multiply\u2019, namely \u2018(- 2 :: Int)\u2019\n      In the first argument of \u2018(==)\u2019, namely\n        \u2018multiply (- 3.14 :: Double) (- 2 :: Int)\u2019\n      In the expression:\n        (multiply (- 3.14 :: Double) (- 2 :: Int) == 6.28)\n   |\n67 | test_19 = (multiply (-3.14 :: Double) (-2 :: Int) == 6.28)\n   |                                        ^^^^^^^^^\n"
+    },
+    {
+      "idx": 163,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpnjqbd50p/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import Data.Set (fromList, empty)\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 164,
+      "compiled": true,
+      "tests_passed": 13,
+      "tests_total": 13,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 165,
+      "compiled": true,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 166,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmprie8cbhm/Solution.hs:16:12: error:\n    Not in scope: type constructor or class \u2018Node\u2019\n   |\n16 | connect :: Node -> Node\n   |            ^^^^\n\n/tmp/tmprie8cbhm/Solution.hs:16:20: error:\n    Not in scope: type constructor or class \u2018Node\u2019\n   |\n16 | connect :: Node -> Node\n   |                    ^^^^\n\n/tmp/tmprie8cbhm/Solution.hs:19:23: error:\n    Not in scope: type constructor or class \u2018Node\u2019\n   |\n19 |     connectLevels :: [Node] -> Node\n   |                       ^^^^\n\n/tmp/tmprie8cbhm/Solution.hs:19:32: error:\n    Not in scope: type constructor or class \u2018Node\u2019\n   |\n19 |     connectLevels :: [Node] -> Node\n   |                                ^^^^\n\n/tmp/tmprie8cbhm/Solution.hs:24:37: error: Not in scope: \u2018next\u2019\n   |\n24 |         _ = zipWith (\\n1 n2 -> n1 { next = Just n2 }) levelNodes (tail levelNodes)\n   |                                     ^^^^\n\n/tmp/tmprie8cbhm/Solution.hs:34:19: error:\n    Not in scope: type constructor or class \u2018Node\u2019\n   |\n34 |     updateNode :: Node -> Node\n   |                   ^^^^\n\n/tmp/tmprie8cbhm/Solution.hs:34:27: error:\n    Not in scope: type constructor or class \u2018Node\u2019\n   |\n34 |     updateNode :: Node -> Node\n   |                           ^^^^\n\n/tmp/tmprie8cbhm/Solution.hs:38:27: error: Not in scope: \u2018next\u2019\n   |\n38 |         Just nNext -> n { next = Just nNext }\n   |                           ^^^^\n"
+    },
+    {
+      "idx": 167,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 168,
+      "compiled": true,
+      "tests_passed": 10,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 169,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp5nglqop9/Solution.hs:38:67: error:\n    Variable not in scope: simulateDays :: Int -> Int -> [Int]\n   |\n38 | simulateVirusTransmission initialInfected transmissionRate days = simulateDays days initialInfected\n   |                                                                   ^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 170,
+      "compiled": true,
+      "tests_passed": 16,
+      "tests_total": 16,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 171,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 172,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 173,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 174,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp12amgg9b/Solution.hs:27:22: error:\n    \u2022 Couldn't match expected type \u2018Complex Double\u2019\n                  with actual type \u2018a\u2019\n      \u2018a\u2019 is a rigid type variable bound by\n        the type signature for:\n          coneProperties :: forall a.\n                            (RealFloat a, Eq a) =>\n                            a -> a -> Maybe a -> (Maybe a, Maybe a)\n        at /tmp/tmp12amgg9b/Solution.hs:19:1-80\n    \u2022 In the first argument of \u2018toResult\u2019, namely \u2018lateralArea\u2019\n      In the expression: toResult lateralArea\n      In the expression: (toResult lateralArea, toResult volume)\n    \u2022 Relevant bindings include\n        lateralArea :: a (bound at /tmp/tmp12amgg9b/Solution.hs:25:13)\n        slant :: a (bound at /tmp/tmp12amgg9b/Solution.hs:24:13)\n        volume :: a (bound at /tmp/tmp12amgg9b/Solution.hs:26:13)\n        mR2 :: Maybe a (bound at /tmp/tmp12amgg9b/Solution.hs:20:20)\n        h :: a (bound at /tmp/tmp12amgg9b/Solution.hs:20:18)\n        r :: a (bound at /tmp/tmp12amgg9b/Solution.hs:20:16)\n        (Some bindings suppressed; use -fmax-relevant-binds=N or -fno-max-relevant-binds)\n   |\n27 |         in (toResult lateralArea, toResult volume)\n   |                      ^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 175,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 9,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmphop2da8i/Solution.hs:22:40: error:\n    Ambiguous occurrence \u2018map\u2019\n    It could refer to\n       either \u2018Data.List.map\u2019,\n              imported from \u2018Data.List\u2019 at /tmp/tmphop2da8i/Solution.hs:3:1-16\n              (and originally defined in \u2018GHC.Base\u2019)\n           or \u2018Data.Map.Strict.map\u2019,\n              imported from \u2018Data.Map.Strict\u2019 at /tmp/tmphop2da8i/Solution.hs:16:48-50\n              (and originally defined in \u2018Data.Map.Strict.Internal\u2019)\n   |\n22 | flattenDictOfLists = fmap (catMaybes . map extractInt)\n   |                                        ^^^\n"
+    },
+    {
+      "idx": 176,
+      "compiled": true,
+      "tests_passed": 18,
+      "tests_total": 18,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 177,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 11,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpf_yhucfp/Solution.hs:16:1: error:\n    parse error on input \u2018module\u2019\n   |\n16 | module FactorialModulo where\n   | ^^^^^^\n"
+    },
+    {
+      "idx": 178,
+      "compiled": true,
+      "tests_passed": 8,
+      "tests_total": 8,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 179,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 180,
+      "compiled": true,
+      "tests_passed": 15,
+      "tests_total": 15,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 181,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpmb15s3vr/Solution.hs:16:1: error:\n    Could not find module \u2018Data.Aeson\u2019\n    Perhaps you meant Data.Version (from base-4.13.0.0)\n    Use -v (or `:set -v` in ghci) to see a list of the files searched for.\n   |\n16 | import Data.Aeson (Value, object, (.=))\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpmb15s3vr/Solution.hs:17:1: error:\n    Could not find module \u2018Data.HashMap.Strict\u2019\n    Perhaps you meant\n      Data.IntMap.Strict (from containers-0.6.2.1)\n      Data.Map.Strict (from containers-0.6.2.1)\n    Use -v (or `:set -v` in ghci) to see a list of the files searched for.\n   |\n17 | import Data.HashMap.Strict (HashMap)\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpmb15s3vr/Solution.hs:18:1: error:\n    Could not find module \u2018Data.HashMap.Strict\u2019\n    Perhaps you meant\n      Data.IntMap.Strict (from containers-0.6.2.1)\n      Data.Map.Strict (from containers-0.6.2.1)\n    Use -v (or `:set -v` in ghci) to see a list of the files searched for.\n   |\n18 | import qualified Data.HashMap.Strict as HM\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+    },
+    {
+      "idx": 182,
+      "compiled": true,
+      "tests_passed": 17,
+      "tests_total": 17,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 183,
+      "compiled": true,
+      "tests_passed": 5,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 184,
+      "compiled": true,
+      "tests_passed": 6,
+      "tests_total": 6,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 185,
+      "compiled": true,
+      "tests_passed": 10,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 186,
+      "compiled": true,
+      "tests_passed": 7,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 187,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp4nsg1ejz/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import Test.HUnit\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 188,
+      "compiled": true,
+      "tests_passed": 9,
+      "tests_total": 12,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 189,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 1,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmp6j5_c6bh/Main.hs:11:1: error:\n    parse error (possibly incorrect indentation or mismatched brackets)\n   |\n11 | import Test.HUnit\n   | ^\n"
+    },
+    {
+      "idx": 190,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": "Main.hs: Prelude.last: empty list\n"
+    },
+    {
+      "idx": 191,
+      "compiled": true,
+      "tests_passed": 14,
+      "tests_total": 14,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 192,
+      "compiled": true,
+      "tests_passed": 1,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 193,
+      "compiled": true,
+      "tests_passed": 10,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 194,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 5,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpj_ijcfwe/Main.hs:10:11: error:\n    parse error on input \u2018import\u2019\n   |\n10 | test_0 = (import qualified Data.Map as Map\n   |           ^^^^^^\n"
+    },
+    {
+      "idx": 195,
+      "compiled": true,
+      "tests_passed": 10,
+      "tests_total": 10,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 196,
+      "compiled": true,
+      "tests_passed": 20,
+      "tests_total": 20,
+      "had_no_tests": false,
+      "stderr": ""
+    },
+    {
+      "idx": 197,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 14,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpfs7k6h71/Main.hs:10:27: error:\n    Data constructor not in scope: AnyInt :: Integer -> a17\n   |\n10 | test_0 = (checkTypeMatch (AnyInt 5) (AnyFloat 3.0) == True)\n   |                           ^^^^^^\n\n/tmp/tmpfs7k6h71/Main.hs:10:38: error:\n    Data constructor not in scope: AnyFloat :: Double -> a17\n   |\n10 | test_0 = (checkTypeMatch (AnyInt 5) (AnyFloat 3.0) == True)\n   |                                      ^^^^^^^^\n\n/tmp/tmpfs7k6h71/Main.hs:13:27: error:\n    Data constructor not in scope: AnyFloat :: Double -> a16\n   |\n13 | test_1 = (checkTypeMatch (AnyFloat 5.0) (AnyFloat 3.0) == True)\n   |                           ^^^^^^^^\n\n/tmp/tmpfs7k6h71/Main.hs:13:42: error:\n    Data constructor not in scope: AnyFloat :: Double -> a16\n   |\n13 | test_1 = (checkTypeMatch (AnyFloat 5.0) (AnyFloat 3.0) == True)\n   |                                          ^^^^^^^^\n\n/tmp/tmpfs7k6h71/Main.hs:16:27: error:\n    Data constructor not in scope: AnyInt :: Integer -> a15\n   |\n16 | test_2 = (checkTypeMatch (AnyInt 5) (AnyInt 3) == True)\n   |                           ^^^^^^\n\n/tmp/tmpfs7k6h71/Main.hs:16:38: error:\n    Data constructor not in scope: AnyInt :: Integer -> a15\n   |\n16 | test_2 = (checkTypeMatch (AnyInt 5) (AnyInt 3) == True)\n   |                                      ^^^^^^\n\n/tmp/tmpfs7k6h71/Main.hs:19:27: error:\n    Data constructor not in scope: AnyString :: [Char] -> a14\n   |\n19 | test_3 = (checkTypeMatch (AnyString \"hello\") (AnyString \"world\") == True)\n   |                           ^^^^^^^^^\n\n/tmp/tmpfs7k6h71/Main.hs:19:47: error:\n    Data constructor not in scope: AnyString :: [Char] -> a14\n   |\n19 | test_3 = (checkTypeMatch (AnyString \"hello\") (AnyString \"world\") == True)\n   |                                               ^^^^^^^^^\n\n/tmp/tmpfs7k6h71/Main.hs:22:27: error:\n    Data constructor not in scope: AnyInt :: Integer -> a13\n   |\n22 | test_4 = (checkTypeMatch (AnyInt 5) (AnyString \"5\") == False)\n   |                           ^^^^^^\n\n/tmp/tmpfs7k6h71/Main"
+    },
+    {
+      "idx": 198,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 7,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpzqoecpoe/Solution.hs:32:1: error:\n    Multiple declarations of \u2018longestLowMoodStreak\u2019\n    Declared at: /tmp/tmpzqoecpoe/Solution.hs:17:1\n                 /tmp/tmpzqoecpoe/Solution.hs:32:1\n   |\n32 | longestLowMoodStreak moods threshold = maximum (0 : allStreaks)\n   | ^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpzqoecpoe/Solution.hs:44:1: error:\n    Multiple declarations of \u2018longestLowMoodStreak\u2019\n    Declared at: /tmp/tmpzqoecpoe/Solution.hs:17:1\n                 /tmp/tmpzqoecpoe/Solution.hs:44:1\n   |\n44 | longestLowMoodStreak moods threshold = maximum (0 : maxStreaks)\n   | ^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpzqoecpoe/Solution.hs:55:1: error:\n    Multiple declarations of \u2018longestLowMoodStreak\u2019\n    Declared at: /tmp/tmpzqoecpoe/Solution.hs:17:1\n                 /tmp/tmpzqoecpoe/Solution.hs:55:1\n   |\n55 | longestLowMoodStreak moods threshold = maximum (0 : allStreaks)\n   | ^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpzqoecpoe/Solution.hs:57:10: error:\n    Conflicting definitions for \u2018allStreaks\u2019\n    Bound at: /tmp/tmpzqoecpoe/Solution.hs:57:10-19\n              /tmp/tmpzqoecpoe/Solution.hs:62:5-14\n   |\n57 |     ( _, allStreaks) = foldl update (0, []) moods\n   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...\n\n/tmp/tmpzqoecpoe/Solution.hs:66:1: error:\n    Multiple declarations of \u2018longestLowMoodStreak\u2019\n    Declared at: /tmp/tmpzqoecpoe/Solution.hs:17:1\n                 /tmp/tmpzqoecpoe/Solution.hs:66:1\n   |\n66 | longestLowMoodStreak moods threshold = maximum (0 : streaks)\n   | ^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpzqoecpoe/Solution.hs:76:1: error:\n    Duplicate type signatures for \u2018longestLowMoodStreak\u2019\n    at /tmp/tmpzqoecpoe/Solution.hs:16:1-20\n       /tmp/tmpzqoecpoe/Solution.hs:31:1-20\n       /tmp/tmpzqoecpoe/Solution.hs:43:1-20\n       /tmp/tmpzqoecpoe/Solution.hs:54:1-20\n       /tmp/tmpzqoecpoe/Solution.hs:65:1-20\n       /tmp/tmpzqoecpoe/Solution.hs:76:1-20\n   |\n76 | longestLowMoodStreak :: [Int] -> Int -> Int\n   | ^^^^^^^^^^^^^^^^^^^^\n\n/tmp/tmpzqoecpoe/Solution.hs:77:1: error:\n    Multiple decla"
+    },
+    {
+      "idx": 199,
+      "compiled": false,
+      "tests_passed": 0,
+      "tests_total": 17,
+      "had_no_tests": false,
+      "stderr": "\n/tmp/tmpjjdavchu/Main.hs:10:28: error: parse error on input \u2018=\u2019\n   |\n10 | test_0 = (taskManagerTest1 = taskManager [\"add task1\", \"add task2\", \"list\"] == Right [\"task1\", \"task2\"])\n   |                            ^\n"
+    }
+  ]
+}
